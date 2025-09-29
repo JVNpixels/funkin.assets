@@ -49,7 +49,7 @@ class UghSong extends Song
 
   function startVideo()
   {
-    VideoCutscene.play(Paths.videos('ughCutscene'));
+    VideoCutscene.play(Paths.videos('ughCutscene.mkv'));
   }
 
   /**

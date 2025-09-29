@@ -27,8 +27,8 @@ class GunsSong extends Song
     }
 
     return results;
-  }  
-  
+  }
+
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
@@ -49,7 +49,7 @@ class GunsSong extends Song
 
   function startVideo()
   {
-    VideoCutscene.play(Paths.videos('gunsCutscene'));
+    VideoCutscene.play(Paths.videos('gunsCutscene.mkv'));
   }
 
   /**

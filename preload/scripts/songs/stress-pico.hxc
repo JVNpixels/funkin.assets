@@ -99,6 +99,7 @@ class StressPicoMixSong extends Song
     {
       videoPath += '-censored';
     }
+    videoPath += '.mkv'; // Use MKV for subtitles.
 
     VideoCutscene.play(Paths.videos(videoPath));
   }
