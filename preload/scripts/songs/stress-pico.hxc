@@ -260,6 +260,12 @@ class StressPicoMixSong extends Song
 
     tankmanCutscene.scriptCall('doAnim');
 
+    if (PlayState.instance.subtitles != null)
+    {
+      PlayState.instance.subtitles.y = FlxG.height * 0.9;
+      PlayState.instance.subtitles.assignSubtitles('songs/stress/subtitles/end-cutscene-pico', tankmanCutscene.scriptGet('cutsceneSounds'));
+    }
+
     new FlxTimer(cutsceneTimerManager).start(176 / 24, _ -> {
       PlayState.instance.currentStage.getBoyfriend().playAnimation('laughEnd', true);
     });
