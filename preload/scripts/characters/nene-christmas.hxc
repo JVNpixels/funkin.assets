@@ -223,7 +223,7 @@ class NeneChristmasCharacter extends SparrowCharacter
           }
 
         case PUPIL_STATE_LEFT:
-          if (pupil.anim.curFrame >= 31)
+          if (pupil.anim.curFrame >= 30)
           {
             pupilState = PUPIL_STATE_NORMAL;
             pupil.anim.pause();
