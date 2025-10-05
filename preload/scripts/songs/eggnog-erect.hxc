@@ -20,6 +20,7 @@ import flixel.text.FlxText;
 import flixel.text.FlxTextBorderStyle;
 import funkin.util.TouchUtil;
 import funkin.ui.FullScreenScaleMode;
+import funkin.Preferences;
 
 // We have to use FlxBasePoint in scripts because FlxPoint is inlined and not available in scripts
 class EggnogErectSong extends Song
@@ -138,7 +139,7 @@ class EggnogErectSong extends Song
     santaSound.volume = 1;
     santaSound.play(false);
 
-    if (PlayState.instance.subtitles != null) PlayState.instance.subtitles.assignSubtitles('songs/eggnog/subtitles/santa-emotions', santaSound);
+    if (Preferences.subtitles) PlayState.instance.subtitles.assignSubtitles('songs/eggnog/subtitles/santa-emotions', santaSound);
 
     shootSound = FunkinSound.load(Paths.sound('santa_shot_n_falls'), 1);
     shootSound.volume = 1;

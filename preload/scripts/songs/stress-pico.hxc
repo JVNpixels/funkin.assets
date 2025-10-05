@@ -18,6 +18,7 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import flixel.util.FlxTimerManager;
+import funkin.Preferences;
 
 class StressPicoMixSong extends Song
 {
@@ -260,7 +261,7 @@ class StressPicoMixSong extends Song
 
     tankmanCutscene.scriptCall('doAnim');
 
-    if (PlayState.instance.subtitles != null)
+    if (Preferences.subtitles)
     {
       PlayState.instance.subtitles.y = FlxG.height * 0.9;
       PlayState.instance.subtitles.assignSubtitles('songs/stress/subtitles/end-cutscene-pico', tankmanCutscene.scriptGet('cutsceneSounds'));
