@@ -9,7 +9,7 @@
     },
     { "t": 100, "e": "SetCameraBop", "v": { "rate": 2, "intensity": 0.8 } },
     {
-      "t": 6000,
+      "t": 6016.66666666667,
       "e": "PlayAnimation",
       "v": { "target": "bf", "force": true, "anim": "hey" }
     },
@@ -30,7 +30,7 @@
       "v": { "duration": 4, "x": 0, "y": 0, "ease": "CLASSIC", "char": 1 }
     },
     {
-      "t": 15600,
+      "t": 15583.3333333333,
       "e": "PlayAnimation",
       "v": { "anim": "cheer", "force": true, "target": "dad" }
     },
@@ -45,7 +45,7 @@
       "v": { "duration": 16, "ease": "expoOut", "mode": "stage", "zoom": 1.1 }
     },
     {
-      "t": 18800,
+      "t": 18783.3333333333,
       "e": "PlayAnimation",
       "v": { "target": "boyfriend", "anim": "cheer", "force": true }
     },
@@ -110,7 +110,7 @@
       "v": { "duration": 4, "x": 0, "y": 0, "ease": "CLASSIC", "char": 1 }
     },
     {
-      "t": 41200,
+      "t": 41183.3333333333,
       "e": "PlayAnimation",
       "v": { "anim": "cheer", "force": true, "target": "dad" }
     },
@@ -125,7 +125,7 @@
       "v": { "ease": "expoOut", "duration": 16, "zoom": 1.1, "mode": "stage" }
     },
     {
-      "t": 44400,
+      "t": 44383.3333333333,
       "e": "PlayAnimation",
       "v": { "force": true, "anim": "cheer", "target": "boyfriend" }
     },

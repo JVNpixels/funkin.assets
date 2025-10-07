@@ -12,9 +12,9 @@
     { "t": 7500, "e": "FocusCamera", "v": { "x": 0, "char": 1, "y": 0 } },
     { "t": 11250, "e": "FocusCamera", "v": { "x": 0, "char": 0, "y": 0 } },
     {
-      "t": 14882.3614457831,
+      "t": 14882.8125,
       "e": "SetCameraBop",
-      "v": { "rate": 2, "intensity": 1.1 }
+      "v": { "rate": 2, "intensity": 1.1, "offset": 1 }
     },
     { "t": 15000, "e": "FocusCamera", "v": { "x": 0, "char": 1, "y": 0 } },
     { "t": 18750, "e": "FocusCamera", "v": { "x": 0, "char": 0, "y": 0 } },

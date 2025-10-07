@@ -7,13 +7,13 @@
     { "t": 9600, "e": "FocusCamera", "v": 0 },
     { "t": 12800, "e": "FocusCamera", "v": 1 },
     {
-      "t": 15600,
+      "t": 15583.3333333333,
       "e": "PlayAnimation",
       "v": { "force": true, "anim": "cheer", "target": "dad" }
     },
     { "t": 16000, "e": "FocusCamera", "v": 0 },
     {
-      "t": 18800,
+      "t": 18783.3333333333,
       "e": "PlayAnimation",
       "v": { "force": true, "anim": "cheer", "target": "boyfriend" }
     },
@@ -23,13 +23,13 @@
     { "t": 35200, "e": "FocusCamera", "v": 0 },
     { "t": 38400, "e": "FocusCamera", "v": 1 },
     {
-      "t": 41200,
+      "t": 41183.3333333333,
       "e": "PlayAnimation",
       "v": { "target": "dad", "anim": "cheer", "force": true }
     },
     { "t": 41600, "e": "FocusCamera", "v": 0 },
     {
-      "t": 44400,
+      "t": 44383.3333333333,
       "e": "PlayAnimation",
       "v": { "target": "boyfriend", "anim": "cheer", "force": true }
     },
