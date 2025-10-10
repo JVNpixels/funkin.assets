@@ -222,8 +222,19 @@ class StressPicoMixSong extends Song
     PlayState.instance.camHUD.visible = false;
 
     rimlightCamera = new FlxCamera();
-    FlxG.cameras.insert(rimlightCamera, (FlxG.onMobile) ? -4 : -2, false);
     rimlightCamera.bgColor = 0x00FFFFFF; // Show the game scene behind the camera.
+
+    var targetCameraPosition:Int;
+    for (i in 0...FlxG.cameras.list.length)
+    {
+      if (FlxG.cameras.list[i] == PlayState.instance.camGame)
+      {
+        targetCameraPosition = i + 1;
+
+        break;
+      }
+    }
+    FlxG.cameras.insert(rimlightCamera, targetCameraPosition, false);
 
     screenspaceRimlight.baseBrightness = -46;
     screenspaceRimlight.baseHue = -38;
