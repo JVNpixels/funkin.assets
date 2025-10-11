@@ -263,7 +263,8 @@ class StressPicoMixSong extends Song
 
     if (Preferences.subtitles)
     {
-      PlayState.instance.subtitles.y = FlxG.height * 0.9;
+      PlayState.instance.subtitles.offsets = [0, 42];
+      PlayState.instance.subtitles.alignment = 'bottom';
       PlayState.instance.subtitles.assignSubtitles('songs/stress/subtitles/end-cutscene-pico', tankmanCutscene.scriptGet('cutsceneSounds'));
     }
 
