@@ -214,6 +214,9 @@ class OtisSpeakerCharacter extends SparrowCharacter
       stereoBG.zIndex = abot.zIndex - 8;
       PlayState.instance.currentStage.add(stereoBG);
 
+      muzzleFlash.zIndex = this.zIndex - 1;
+      PlayState.instance.currentStage.add(muzzleFlash);
+
       PlayState.instance.currentStage.refresh();
       refershedLol = true;
     }

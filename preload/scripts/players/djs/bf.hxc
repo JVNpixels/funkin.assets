@@ -120,7 +120,7 @@ class BoyfriendFreeplayDJ extends AnimateAtlasFreeplayDJ
       cartoonSndPersist = null;
     }
 
-    this.cartoonSnd = FunkinSound.load(getRandomFlashToon(), 1.0, false, true, true, () -> {
+    this.cartoonSnd = FunkinSound.load(Paths.sound(getRandomFlashToon()), 1.0, false, true, true, () -> {
       var animPrefix = playableCharData.getAnimationPrefix('cartoon');
       if (animPrefix != null) playFlashAnimation(animPrefix, true, false, false, 60);
     });
@@ -135,7 +135,7 @@ class BoyfriendFreeplayDJ extends AnimateAtlasFreeplayDJ
 
   function getRandomFlashToon():String
   {
-    var randomFile = cartoonList[FlxG.random.int(0, cartoonList.length - 1)];
+    var randomFile:String = CARTOON_LIST[FlxG.random.int(0, CARTOON_LIST.length - 1)];
 
     // Strip folder prefix
     randomFile = randomFile.replace("assets/sounds/", "");
