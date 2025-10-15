@@ -63,6 +63,15 @@ class PicoPixelCharacter extends SparrowCharacter
   {
     super.onAnimationFrame(name, frameNumber, frameIndex);
 
+    if (name == "firstDeath" && frameNumber == 36 - 1)
+    {
+      GameOverSubState.instance.startDeathMusic(1.0, false);
+      // force the deathloop to play in here, since we are starting the music early it
+      // doesn't check this in gameover substate !
+      // also no animation suffix 🤔
+      GameOverSubState.instance.boyfriend.playAnimation('deathLoop');
+    }
+
     if (!HapticUtil.hapticsAvailable) return;
 
     // Pico falls on his back.
