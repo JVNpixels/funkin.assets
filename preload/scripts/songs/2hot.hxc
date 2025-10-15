@@ -103,9 +103,21 @@ class TwoHOTSong extends Song
     VideoCutscene.onVideoStarted.removeAll();
     VideoCutscene.hideVideo();
 
+    new FlxTimer().start(0, function(tmr) {
+      PlayState.instance.currentStage.getGirlfriend().playAnimation('danceLeft', true, true);
+    });
+
+    new FlxTimer().start(0.7, function(tmr) {
+      PlayState.instance.currentStage.getGirlfriend().playAnimation('danceRight', true, true);
+    });
+
     new FlxTimer().start(1, function(tmr) {
       PlayState.instance.tweenCameraToPosition(1539, 833.5, 2, FlxEase.quadInOut);
       PlayState.instance.tweenCameraZoom(0.69, 2, true, FlxEase.quadInOut);
+    });
+
+    new FlxTimer().start(1.4, function(tmr) {
+      PlayState.instance.currentStage.getGirlfriend().playAnimation('danceLeft', true, true);
     });
 
     new FlxTimer().start(2, function(tmr) {
@@ -117,8 +129,32 @@ class TwoHOTSong extends Song
       }
       FullScreenScaleMode.addCutouts(3.0, FlxEase.quintOut);
     });
+    new FlxTimer().start(2.1, function(tmr) {
+      PlayState.instance.currentStage.getGirlfriend().playAnimation('danceRight', true, true);
+    });
+
     new FlxTimer().start(2.5, function(tmr) {
       PlayState.instance.currentStage.getDad().playAnimation('pissed', true, true);
+    });
+
+    new FlxTimer().start(2.8, function(tmr) {
+      PlayState.instance.currentStage.getGirlfriend().playAnimation('danceLeft', true, true);
+    });
+
+    new FlxTimer().start(3.5, function(tmr) {
+      PlayState.instance.currentStage.getGirlfriend().playAnimation('danceRight', true, true);
+    });
+
+    new FlxTimer().start(4.2, function(tmr) {
+      PlayState.instance.currentStage.getGirlfriend().playAnimation('danceLeft', true, true);
+    });
+
+    new FlxTimer().start(4.9, function(tmr) {
+      PlayState.instance.currentStage.getGirlfriend().playAnimation('danceRight', true, true);
+    });
+
+    new FlxTimer().start(5.6, function(tmr) {
+      PlayState.instance.currentStage.getGirlfriend().playAnimation('danceLeft', true, true);
     });
 
     new FlxTimer().start(6, function(tmr) {
