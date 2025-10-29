@@ -156,7 +156,7 @@ class TwoHOTSong extends Song
     });
 
     cutsceneConductor = new Conductor();
-    cutsceneConductor.forceBPM(85.7);
+    cutsceneConductor.forceBPM(86.5);
     cutsceneConductor.onBeatHit.add(() -> {
       if (PlayState.instance.currentStage.getGirlfriend().isAnimationFinished())
       {
