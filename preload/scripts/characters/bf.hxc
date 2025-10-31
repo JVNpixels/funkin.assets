@@ -50,13 +50,17 @@ class BoyfriendCharacter extends MultiSparrowCharacter
   {
     FunkinSound.playOnce(Paths.sound("gameplay/gameover/fakeout_death"), 1.0);
 
-    var bfFakeout:FunkinSprite = FunkinSprite.createTextureAtlas(this.x - 440, this.y - 240, "characters/bfFakeOut", "shared");
+    var bfFakeout:FunkinSprite = FunkinSprite.createTextureAtlas(this.x - 430, this.y - 240, "characters/bfFakeOut", "shared");
+
+    // man i'm tired i'm just gonna do this the easy way
+    bfFakeout.applyStageMatrix = true;
+
     GameOverSubState.instance.add(bfFakeout);
     bfFakeout.zIndex = 1000;
     bfFakeout.anim.play('');
     // We don't want people to miss this.
     GameOverSubState.instance.mustNotExit = true;
-    bfFakeout.onAnimationComplete.add(() -> {
+    bfFakeout.animation.onFinish.add(() -> {
       bfFakeout.visible = false;
       this.visible = true;
       GameOverSubState.instance.mustNotExit = false;
