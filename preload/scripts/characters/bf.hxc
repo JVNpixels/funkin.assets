@@ -70,7 +70,7 @@ class BoyfriendCharacter extends MultiSparrowCharacter
 
   override function getDeathQuote():Null<String>
   {
-    switch (PlayState.instance.currentStage.getDad().characterId)
+    switch (PlayState.instance?.currentStage?.getDad()?.characterId)
     {
       case "tankman":
         var randomCensor:Array<Int> = [];
