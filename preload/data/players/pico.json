@@ -21,7 +21,7 @@
     "text3": "ZEBOIM DAMN IMA NUT",
     "fistPump": {
       "introStartFrame": 0,
-      "introEndFrame": 4,
+      "introEndFrame": 3,
 
       "loopStartFrame": 4,
       "loopEndFrame": -1,
