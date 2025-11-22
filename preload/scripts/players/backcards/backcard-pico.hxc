@@ -146,16 +146,20 @@ class PicoCard extends BackingCard
     glowDark.visible = false;
 
     confirmAtlas = FunkinSprite.createTextureAtlas((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) - 50, 55,
-      "freeplay/backingCards/pico/pico-confirm");
+      "freeplay/backingCards/pico/pico-confirm", null, { cacheOnLoad: true });
     confirmAtlas.visible = false;
     add(confirmAtlas);
-
-    var confirmAtlasBG:Element = confirmAtlas.getFirstElement("backplate flat blue");
 
     // multiply the scale of the bg by 2
     // this should be enough, since no phone screen should ever be bigger than whatever
     // this gets scaled to
-    confirmAtlas.scaleElement(confirmAtlasBG, 2, 100);
+    confirmAtlas.scaleElement(confirmAtlas.getFirstElement("backplate flat blue"), 2, 100);
+    confirmAtlas.scaleElement(confirmAtlas.getFirstElement("pink back"), 2, 100);
+    confirmAtlas.scaleElement(confirmAtlas.getFirstElement("black flash"), 2, 100);
+    confirmAtlas.scaleElement(confirmAtlas.getFirstElement("white flash"), 2, 100);
+    confirmAtlas.scaleElement(confirmAtlas.getFirstElement("blue flash"), 2, 100);
+    confirmAtlas.scaleElement(confirmAtlas.getFirstElement("blue flash 2"), 2, 100);
+    confirmAtlas.scaleElement(confirmAtlas.getFirstElement("pink flash"), 2, 100);
 
     cardGlow.blend = 0;
     cardGlow.visible = false;
