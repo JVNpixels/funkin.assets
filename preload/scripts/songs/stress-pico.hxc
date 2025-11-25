@@ -45,6 +45,9 @@ class StressPicoMixSong extends Song
   {
     super.onCountdownStart(event);
 
+    // Skip the cutscene if we're playtesting in the Chart Editor.
+    if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
+
     if (!hasPlayedCutscene)
     {
       trace('Pausing countdown to play a video cutscene (`stress`)');
