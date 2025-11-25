@@ -145,8 +145,8 @@ class PicoCard extends BackingCard
     glow.visible = false;
     glowDark.visible = false;
 
-    confirmAtlas = FunkinSprite.createTextureAtlas((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) - 50, 55,
-      "freeplay/backingCards/pico/pico-confirm", null, { cacheOnLoad: true });
+    confirmAtlas = FunkinSprite.createTextureAtlas((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) - 120, 55,
+      "freeplay/backingCards/pico/pico-confirm");
     confirmAtlas.visible = false;
     add(confirmAtlas);
 
