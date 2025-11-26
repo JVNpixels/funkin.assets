@@ -28,7 +28,7 @@
       "name": "singLEFT-hold",
       "prefix": "Monster Right note",
       "frameIndices": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
-      "offsets": [-30, 20],
+      "offsets": [-36, 20],
       "looped": true,
       "animType": "symbol"
     },
