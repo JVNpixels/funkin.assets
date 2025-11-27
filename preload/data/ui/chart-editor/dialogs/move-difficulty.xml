@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<dialog id="cloneDifficultyDialog" width="300" height="200" title="Clone Difficulty">
+<dialog id="moveDifficultyDialog" width="300" height="200" title="Move Difficulty">
 	<vbox width="100%" height="100%">
 		<form id="difficultyForm" width="100%" height="100%">
 			<vbox width="100%" height="100%">
-				<label text="Cloning selected difficulty..." width="100%" textAlign="center" />
+				<label text="Moving selected difficulty..." width="100%" textAlign="center" />
 				<grid columns="2" width="100%">
 					<label text="New Difficulty Name:" verticalAlign="center" horizontalAlign="right" />
 					<textfield id="dialogDifficultyName" placeholder="Difficulty name..." width="100%" validator="required" />
@@ -26,7 +26,7 @@
 		<hbox width="100%">
 			<button text="Cancel" id="dialogCancel" />
 			<spacer width="100%" />
-			<button text="Clone" id="dialogClone" horizontalAlign="right" />
+			<button text="Move" id="dialogClone" horizontalAlign="right" />
 		</hbox>
 	</vbox>
 </dialog>

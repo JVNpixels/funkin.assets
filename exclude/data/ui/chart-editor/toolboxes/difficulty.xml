@@ -9,11 +9,10 @@
             <button allowFocus="false" id="difficultyToolboxAddDifficulty" text="Add Difficulty" tooltip="Add a new difficulty to a given variation."/>
         </hbox>
         <hbox>
-            <button allowFocus="false" id="difficultyToolboxRenameDifficulty" text="Rename Difficulty" tooltip="Change the name of the selected difficulty." />
-            <button allowFocus="false" id="difficultyToolboxMoveDifficulty" text="Move Difficulty" tooltip="Move the selected difficulty to a different variation." />
+            <button allowFocus="false" id="difficultyToolboxMoveDifficulty" text="Move Difficulty" tooltip="Rename the selected difficulty, or move it to a different variation." />
+            <button allowFocus="false" id="difficultyToolboxCloneDifficulty" text="Clone Difficulty" tooltip="Make a new difficulty with all the nodes and events of the current difficulty." />
         </hbox>
         <hbox>
-            <button allowFocus="false" id="difficultyToolboxCloneDifficulty" text="Clone Difficulty" tooltip="Make a new difficulty with all the nodes and events of the current difficulty." />
             <button allowFocus="false" id="difficultyToolboxRemoveDifficulty" text="Remove Difficulty" tooltip="Delete the selected difficulty." />
         </hbox>
         <rule />
