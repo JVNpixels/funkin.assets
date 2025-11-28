@@ -262,7 +262,7 @@ class PhillyTrainErectStage extends Stage
     });
 
     new FlxTimer(cutsceneTimerManager).start(11.5, _ -> {
-      if (explode)
+      if (!explode)
       {
         cigarette.visible = true;
         cigarette.animation.play('cigarette spit');
