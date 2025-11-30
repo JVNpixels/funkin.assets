@@ -8,7 +8,7 @@
     "id": "mom"
   },
   "offsets": [0, -210],
-  "cameraOffsets": [0, -350],
+  "cameraOffsets": [0, -330],
   "animations": [
     {
       "name": "idle",
