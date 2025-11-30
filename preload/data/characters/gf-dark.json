@@ -49,7 +49,8 @@
     {
       "name": "scared",
       "prefix": "GF FEAR",
-      "offsets": [-2, -17]
+      "offsets": [-2, -17],
+      "frameIndices": [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3]
     }
   ]
 }

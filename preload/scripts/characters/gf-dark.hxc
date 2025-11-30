@@ -32,7 +32,7 @@ class GirlfriendDarkCharacter extends SparrowCharacter
     if (normalChar != null)
     {
       normalChar.playAnimation(name, restart, ignoreOther);
-      normalChar.setPosition(this.x, this.y);
+      normalChar.setPosition(this.x + 325, this.y + 485);
     }
   }
 

@@ -10,7 +10,7 @@
     {
       "name": "danceLeft",
       "prefix": "GF Dancing Beat",
-      "frameIndices": [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
       "animType": "symbol",
       "offsets": [0, 0]
     },
@@ -34,7 +34,7 @@
       "prefix": "gf sad",
       "animType": "symbol",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "offsets": [0, -18]
+      "offsets": [0, -17.5]
     }
   ]
 }
