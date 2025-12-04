@@ -1,31 +1,45 @@
-import flixel.math.FlxPoint;
-import flixel.FlxSprite;
 import funkin.graphics.FunkinSprite;
-import funkin.play.PlayState;
-import flixel.util.FlxTimer;
-import flixel.util.FlxTimerManager;
-import flixel.FlxG;
 import funkin.audio.FunkinSound;
+import funkin.graphics.shaders.DropShadowShader;
 
 class TankmanEndingSprite extends FunkinSprite
 {
+  var cutsceneSounds:Null<FunkinSound> = null;
+
   public function new(x:Float, y:Float)
   {
     super(x, y);
 
-    loadTextureAtlas("erect/cutscene/tankmanEnding", "week7");
+    loadTextureAtlas("erect/cutscene/tankmanEnding", "week7",
+      {
+        useRenderTexture: true
+      });
+
+    applyRimlightShader();
   }
 
-  var cutsceneSounds:FunkinSound = null;
+  function applyRimlightShader():Void
+  {
+    var rimlightShader:DropShadowShader = new DropShadowShader();
+    rimlightShader.setAdjustColor(-46, -38, -25, -20);
+    rimlightShader.color = 0xFFDFEF3C;
+    rimlightShader.attachedSprite = this.superClass;
+    rimlightShader.threshold = 0.2;
+    this.shader = rimlightShader;
 
-  public function cancelSounds()
+    this.animation.onFrameChange.add(function() {
+      rimlightShader.updateFrameInfoSimple(this.frameWidth, this.frameHeight, 0);
+    });
+  }
+
+  public function cancelSounds():Void
   {
     if (cutsceneSounds != null) cutsceneSounds.destroy();
   }
 
-  function doAnim()
+  public function doAnim():Void
   {
-    this.anim.play("tankman stress ending", true);
+    this.animation.play("tankman stress ending", true);
     cutsceneSounds = FunkinSound.load(Paths.sound('erect/endCutscene'), 1.0, false, true, true);
   }
 }

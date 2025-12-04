@@ -39,29 +39,26 @@ class TankmanBattlefieldErectStage extends Stage
     character.shader = rim;
     rim.attachedSprite = character;
 
+    if (character.isAnimate)
+    {
+      character.useRenderTexture = true;
+
+      // This is to properly intitialize the shader itself
+      // If this isn't here, the character will flash piss yellow briefly before the next animation frame!!
+      rim.updateFrameInfoSimple(character.frameWidth, character.frameHeight, 0);
+    }
+
     switch (charType)
     {
       case CharacterType.BF:
         rim.angle = 90;
 
-        character.animation.onFrameChange.add(function() {
-          if (getBoyfriend() != null)
-          {
-            rim.updateFrameInfo(getBoyfriend().frame);
-          }
-        });
-
       case CharacterType.GF:
         rim.angle = 90;
 
-        character.animation.onFrameChange.add(function() {
-          rim.updateFrameInfo(getGirlfriend().frame);
-        });
-
         if (getGirlfriend().characterId == 'gf-tankmen' || getGirlfriend().characterId == 'nene-tankmen')
         {
-          if (getGirlfriend().characterId == 'gf-tankmen')
-            rim.loadAltMask(Paths.image('erect/masks/gfTankmen_mask'));
+          if (getGirlfriend().characterId == 'gf-tankmen') rim.loadAltMask(Paths.image('erect/masks/gfTankmen_mask'));
           else
             rim.loadAltMask(Paths.image('erect/masks/neneTankmen_mask'));
           rim.maskThreshold = 0.4;
@@ -77,10 +74,6 @@ class TankmanBattlefieldErectStage extends Stage
         rim.angle = 135;
         rim.threshold = 0.3;
 
-        character.animation.onFrameChange.add(function() {
-          rim.updateFrameInfo(getDad().frame);
-        });
-
         if (getDad().characterId == 'tankman-bloody')
         {
           rim.loadAltMask(Paths.image('erect/masks/tankmanCaptainBloody_mask'));
@@ -92,7 +85,19 @@ class TankmanBattlefieldErectStage extends Stage
         tankmanRim = rim;
 
       default:
+        // Do nothing.
     }
+
+    // TODO: This is here because of a Polymod bug!!
+    var character_persist:BaseCharacter = character;
+
+    character.animation.onFrameChange.add(function() {
+      if (character_persist != null)
+      {
+        var frameAngle:Float = !character_persist.isAnimate ? character_persist.frame.angle : 0;
+        rim.updateFrameInfoSimple(character_persist.frameWidth, character_persist.frameHeight, frameAngle);
+      }
+    });
   }
 
   /**
