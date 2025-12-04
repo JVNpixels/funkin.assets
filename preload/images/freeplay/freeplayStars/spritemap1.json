@@ -1,1 +1,14 @@
-﻿{"ATLAS":{"SPRITES":[{"SPRITE":{"name":"0000","x":59,"y":59,"w":13,"h":12,"rotated":false}},{"SPRITE":{"name":"0001","x":0,"y":0,"w":54,"h":54,"rotated":false}},{"SPRITE":{"name":"0002","x":0,"y":59,"w":54,"h":54,"rotated":false}},{"SPRITE":{"name":"0003","x":59,"y":0,"w":54,"h":54,"rotated":false}}]},"meta":{"app":"Adobe Animate","version":"22.0.0.93","image":"spritemap1.png","format":"RGBA8888","size":{"w":113,"h":113},"resolution":"1"}}
+{"ATLAS":{"SPRITES":[
+{"SPRITE":{"name":"0","x":0,"y":0,"w":58,"h":57,"rotated":false}},
+{"SPRITE":{"name":"1","x":0,"y":75,"w":58,"h":57,"rotated":false}},
+{"SPRITE":{"name":"2","x":75,"y":150,"w":15,"h":15,"rotated":false}},
+{"SPRITE":{"name":"3","x":0,"y":150,"w":57,"h":57,"rotated":false}}]},
+"meta":{
+"app":"Adobe Animate (Better TA Extension)",
+"version":"24.0.2.12",
+"image":"spritemap1.png",
+"format":"RGBA8888",
+"size":{"w":111,"h":228},
+"resolution":"1"
+}
+}
