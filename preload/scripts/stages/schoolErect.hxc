@@ -43,7 +43,15 @@ class SchoolErectStage extends Stage
         rim.angle = 90;
         character.shader = rim;
 
-        rim.loadAltMask(Paths.image('weeb/erect/masks/bfPixel_mask'));
+        if (character.characterId == 'pico-pixel')
+        {
+          rim.loadAltMask(Paths.image('weeb/erect/masks/picoPixel_mask'));
+        }
+        else
+        {
+          rim.loadAltMask(Paths.image('weeb/erect/masks/bfPixel_mask'));
+        }
+
         rim.maskThreshold = 1;
         rim.useAltMask = true;
 
@@ -61,7 +69,16 @@ class SchoolErectStage extends Stage
         rim.distance = 3;
         rim.threshold = 0.3;
 
-        rim.loadAltMask(Paths.image('weeb/erect/masks/gfPixel_mask'));
+        if (character.characterId == 'nene-pixel')
+        {
+          rim.loadAltMask(Paths.image('weeb/erect/masks/nenePixel_mask'));
+          character.addSunsetShaders();
+        }
+        else
+        {
+          rim.loadAltMask(Paths.image('weeb/erect/masks/gfPixel_mask'));
+        }
+
         rim.maskThreshold = 1;
         rim.useAltMask = true;
 
