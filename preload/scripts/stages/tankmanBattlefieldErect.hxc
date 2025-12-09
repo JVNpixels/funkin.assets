@@ -71,7 +71,7 @@ class TankmanBattlefieldErectStage extends Stage
         }
 
       case CharacterType.DAD:
-        rim.angle = 135;
+        rim.angle = 30;
         rim.threshold = 0.3;
 
         if (getDad().characterId == 'tankman-bloody')
