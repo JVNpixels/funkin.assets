@@ -1,142 +1,82 @@
 {
   "version": "1.0.0",
-  "renderType": "multisparrow",
-  "offsets": [0, -50],
-  "danceEvery": 1,
-  "scale": 1,
   "name": "Tankman (Bloody)",
-  "flipX": true,
-  "cameraOffsets": [0, 0],
-  "singTime": 8,
-  "startingAnimation": "idle",
-  "isPixel": false,
-  "assetPath": "characters/tankmanCaptain",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/tankman/basic",
+  "offsets": [10, -210],
+  "cameraOffsets": [10, -170],
   "healthIcon": {
-    "offsets": [0, 0],
-    "id": "tankman",
-    "flipX": false,
-    "isPixel": false,
-    "scale": 1
+    "id": "tankman"
   },
   "animations": [
     {
-      "flipY": false,
-      "offsets": [0, 0],
-      "frameRate": 24,
-      "prefix": "Tankman Idle Dance instance 1",
-      "flipX": false,
-      "name": "idle"
+      "name": "idle",
+      "prefix": "idle"
     },
     {
-      "flipY": false,
-      "offsets": [90, -13],
-      "frameRate": 24,
-      "prefix": "Tankman Right Note instance 1",
-      "flipX": false,
-      "name": "singLEFT"
+      "name": "singLEFT",
+      "prefix": "left"
     },
     {
-      "flipY": false,
-      "offsets": [63, -105],
-      "frameRate": 24,
-      "prefix": "Tankman DOWN note instance 1",
-      "flipX": false,
-      "name": "singDOWN"
+      "name": "singDOWN",
+      "prefix": "down"
     },
     {
-      "flipY": false,
-      "offsets": [48, 54],
-      "frameRate": 24,
-      "prefix": "Tankman UP note instance 1",
-      "flipX": false,
-      "name": "singUP"
+      "name": "singUP",
+      "prefix": "up"
     },
     {
-      "flipY": false,
-      "offsets": [-22, -28],
-      "frameRate": 24,
-      "prefix": "Tankman Note Left instance 1",
-      "flipX": false,
-      "name": "singRIGHT"
+      "name": "singRIGHT",
+      "prefix": "right"
     },
     {
-      "flipY": false,
-      "offsets": [-2, 15],
-      "frameRate": 24,
-      "prefix": "PRETTY GOOD tankman instance 1",
-      "flipX": false,
-      "name": "hehPrettyGood"
+      "assetPath": "shared:characters/tankman/bloody",
+      "name": "idle-bloody",
+      "prefix": "idle knife",
+      "offsets": [67, 110]
     },
     {
-      "flipY": false,
-      "offsets": [-16, -9],
-      "frameRate": 24,
-      "prefix": "TANKMAN UGH instance 1",
-      "flipX": false,
-      "name": "ugh"
+      "assetPath": "shared:characters/tankman/bloody",
+      "name": "singLEFT-bloody",
+      "prefix": "left knife",
+      "offsets": [67, 110]
     },
     {
-      "flipY": false,
-      "offsets": [0, 52],
-      "frameRate": 24,
-      "prefix": "Tankman Idle bloody0",
-      "flipX": false,
-      "assetPath": "characters/tankmanCaptainBloody",
-      "name": "idle-bloody"
+      "assetPath": "shared:characters/tankman/bloody",
+      "name": "singDOWN-bloody",
+      "prefix": "down knife",
+      "offsets": [67, 110]
     },
     {
-      "flipY": false,
-      "offsets": [90, 15],
-      "frameRate": 24,
-      "prefix": "Tankman Right Note bloody0",
-      "flipX": false,
-      "assetPath": "characters/tankmanCaptainBloody",
-      "name": "singLEFT-bloody"
+      "assetPath": "shared:characters/tankman/bloody",
+      "name": "singUP-bloody",
+      "prefix": "up knife",
+      "offsets": [67, 110]
     },
     {
-      "flipY": false,
-      "offsets": [62, -105],
-      "frameRate": 24,
-      "prefix": "Tankman DOWN note bloody0",
-      "flipX": false,
-      "assetPath": "characters/tankmanCaptainBloody",
-      "name": "singDOWN-bloody"
+      "assetPath": "shared:characters/tankman/bloody",
+      "name": "singRIGHT-bloody",
+      "prefix": "right knife",
+      "offsets": [67, 110]
     },
     {
-      "flipY": false,
-      "offsets": [47, 165],
-      "frameRate": 24,
-      "prefix": "Tankman UP note bloody0",
-      "flipX": false,
-      "assetPath": "characters/tankmanCaptainBloody",
-      "name": "singUP-bloody"
+      "assetPath": "shared:characters/tankman/bloody",
+      "name": "hehPrettyGood-bloody",
+      "prefix": "pretty good bloody",
+      "offsets": [67, 110]
     },
     {
-      "flipY": false,
-      "offsets": [-23, 17],
-      "frameRate": 24,
-      "prefix": "Tankman Note Left bloody0",
-      "flipX": false,
-      "assetPath": "characters/tankmanCaptainBloody",
-      "name": "singRIGHT-bloody"
+      "assetPath": "shared:characters/tankman/bloody",
+      "name": "redheadsAnim",
+      "prefix": "redheads",
+      "offsets": [67, 110]
     },
     {
-      "flipY": false,
-      "offsets": [110, 117],
-      "frameRate": 24,
-      "prefix": "redheads anim0",
-      "flipX": false,
-      "assetPath": "characters/tankmanCaptainBloody",
-      "name": "redheadsAnim"
-    },
-    {
-      "flipY": false,
-      "offsets": [0, 90],
-      "frameRate": 24,
-      "prefix": "pretty good anim0",
-      "assetPath": "characters/tankmanCaptainBloody",
-      "flipX": false,
-      "name": "hehPrettyGood-bloody"
+      "assetPath": "week7:erect/cutscene/tankmanEnding",
+      "name": "stressPicoEnding",
+      "prefix": "tankman stress ending",
+      "animType": "symbol",
+      "offsets": [-87, 18]
     }
   ]
 }

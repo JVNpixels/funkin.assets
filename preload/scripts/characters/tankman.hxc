@@ -1,8 +1,8 @@
-import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.character.CharacterType;
 import funkin.play.PlayState;
 
-class TankmanCharacter extends MultiSparrowCharacter
+class TankmanCharacter extends MultiAnimateAtlasCharacter
 {
   function new()
   {

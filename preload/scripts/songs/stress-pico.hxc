@@ -139,8 +139,6 @@ class StressPicoMixSong extends Song
 
   var hasPlayedEndCutscene:Bool = false;
 
-  var tankmanCutscene:ScriptedFunkinSprite;
-
   function onUpdate(event:UpdateScriptEvent):Void
   {
     super.onUpdate(event);
@@ -148,14 +146,6 @@ class StressPicoMixSong extends Song
     if (PlayState.instance.isInCutscene)
     {
       if (cutsceneTimerManager != null) cutsceneTimerManager.update(event.elapsed);
-
-      if (FlxG.mouse.pressed)
-      {
-        // tankmanCutscene.x = FlxG.mouse.viewX - PlayState.instance.currentStage.getDad().x;
-        //  tankmanCutscene.y = FlxG.mouse.viewY - PlayState.instance.currentStage.getDad().y;
-
-        // trace(tankmanCutscene.x  - PlayState.instance.currentStage.getDad().x, tankmanCutscene.y  - PlayState.instance.currentStage.getDad().y);
-      }
     }
   }
 
@@ -214,23 +204,16 @@ class StressPicoMixSong extends Song
     PlayState.instance.isInCutscene = true;
     PlayState.instance.camHUD.visible = false;
 
-    tankmanCutscene = new TankmanEndingSprite(0, 0);
-    tankmanCutscene.setPosition(35, 240);
-
     PlayState.instance.tweenCameraToPosition(tankmanPos[0] + 320, tankmanPos[1] - 70, 2.8, FlxEase.expoOut);
     PlayState.instance.tweenCameraZoom(0.65, 2, true, FlxEase.expoOut);
 
-    PlayState.instance.currentStage.getDad().visible = false;
-    PlayState.instance.currentStage.add(tankmanCutscene);
-
-    tankmanCutscene.camera = PlayState.instance.currentStage.getDad().camera;
-    tankmanCutscene.doAnim();
+    PlayState.instance.currentStage.getDad().playAnimation('stressPicoEnding', true);
 
     if (Preferences.subtitles)
     {
       PlayState.instance.subtitles.offsets = [0, 42];
       PlayState.instance.subtitles.alignment = 'bottom';
-      PlayState.instance.subtitles.assignSubtitles('songs/stress/subtitles/end-cutscene-pico', tankmanCutscene.scriptGet('cutsceneSounds'));
+      PlayState.instance.subtitles.assignSubtitles('songs/stress/subtitles/end-cutscene-pico', PlayState.instance.currentStage.getDad().picoEndingSound);
     }
 
     new FlxTimer(cutsceneTimerManager).start(176 / 24, _ -> {
