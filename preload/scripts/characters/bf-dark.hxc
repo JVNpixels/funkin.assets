@@ -1,15 +1,10 @@
-import flixel.FlxG;
-import funkin.audio.FunkinSound;
-import funkin.play.character.SparrowCharacter;
-import funkin.play.GameOverSubState;
 import funkin.play.character.BaseCharacter;
 import funkin.data.character.CharacterDataParser;
-import funkin.play.character.CharacterType;
 import funkin.play.PlayState;
-import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.util.HapticUtil;
 
-class BoyfriendDarkCharacter extends MultiSparrowCharacter
+class BoyfriendDarkCharacter extends MultiAnimateAtlasCharacter
 {
   function new()
   {
@@ -53,11 +48,11 @@ class BoyfriendDarkCharacter extends MultiSparrowCharacter
     if (normalChar != null)
     {
       normalChar.playAnimation(name, restart, ignoreOther);
-      normalChar.setPosition(this.x, this.y);
+      normalChar.setPosition(this.x, this.y + 11);
     }
   }
 
-  function onCreate(event:ScriptEvent)
+  function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
     normalChar = CharacterDataParser.fetchCharacter('bf');

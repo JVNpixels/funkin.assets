@@ -2,129 +2,115 @@
   "version": "1.0.0",
   "name": "Boyfriend (Car)",
   "assetPath": "shared:characters/bf-car",
-  "renderType": "animateatlas",
+  "renderType": "multianimateatlas",
   "healthIcon": {
     "id": "bf"
   },
   "flipX": true,
-  "offsets": [0, -105],
-  "cameraOffsets": [0, -95],
+  "offsets": [15, -120],
+  "cameraOffsets": [15, -90],
   "death": {
-    "cameraOffsets": [-70, -370]
+    "cameraOffsets": [-300, -450]
   },
   "animations": [
     {
       "name": "idle",
-      "prefix": "BF idle dance",
-      "offsets": [-5, 0],
-      "animType": "symbol"
+      "prefix": "Idle"
     },
     {
       "name": "idle-hold",
-      "prefix": "BF idle dance",
+      "prefix": "Idle",
       "frameIndices": [10, 11, 12, 13],
-      "looped": true,
-      "offsets": [-5, 0],
-      "animType": "symbol"
+      "looped": true
     },
     {
       "name": "singLEFT",
-      "prefix": "BF NOTE LEFT",
-      "offsets": [-3, 1],
-      "animType": "symbol"
+      "prefix": "Left"
     },
     {
       "name": "singLEFT-hold",
-      "prefix": "BF NOTE LEFT",
+      "prefix": "Left",
       "frameIndices": [10, 11, 12, 13],
-      "looped": true,
-      "offsets": [-3, 1],
-      "animType": "symbol"
+      "looped": true
     },
     {
       "name": "singDOWN",
-      "prefix": "BF NOTE DOWN",
-      "offsets": [-15, -40],
-      "animType": "symbol"
+      "prefix": "Down"
     },
     {
       "name": "singDOWN-hold",
-      "prefix": "BF NOTE DOWN",
+      "prefix": "Down",
       "frameIndices": [10, 11, 12, 13],
-      "looped": true,
-      "offsets": [-15, -40],
-      "animType": "symbol"
+      "looped": true
     },
     {
       "name": "singUP",
-      "prefix": "BF NOTE UP",
-      "offsets": [-17, 67],
-      "animType": "symbol"
+      "prefix": "Up"
     },
     {
       "name": "singUP-hold",
-      "prefix": "BF NOTE UP",
+      "prefix": "Up",
       "frameIndices": [10, 11, 12, 13],
-      "looped": true,
-      "offsets": [-17, 67],
-      "animType": "symbol"
+      "looped": true
     },
     {
       "name": "singRIGHT",
-      "prefix": "BF NOTE RIGHT",
-      "offsets": [-52, 7],
-      "animType": "symbol"
+      "prefix": "Right"
     },
     {
       "name": "singRIGHT-hold",
-      "prefix": "BF NOTE RIGHT",
+      "prefix": "Right",
       "frameIndices": [10, 11, 12, 13],
-      "looped": true,
-      "offsets": [-52, 7],
-      "animType": "symbol"
+      "looped": true
     },
     {
       "name": "singLEFTmiss",
-      "prefix": "BF NOTE LEFT MISS",
-      "offsets": [-6, 12],
-      "animType": "symbol"
+      "prefix": "Left Miss"
     },
     {
       "name": "singDOWNmiss",
-      "prefix": "BF NOTE DOWN MISS",
-      "offsets": [-18, -23],
-      "animType": "symbol"
+      "prefix": "Down Miss"
     },
     {
       "name": "singUPmiss",
-      "prefix": "BF NOTE UP MISS",
-      "offsets": [-21, 62],
-      "animType": "symbol"
+      "prefix": "Up Miss"
     },
     {
       "name": "singRIGHTmiss",
-      "prefix": "BF NOTE RIGHT MISS",
-      "offsets": [-44, 15],
-      "animType": "symbol"
+      "prefix": "Right Miss"
     },
     {
+      "name": "hey",
+      "prefix": "Hey"
+    },
+    {
+      "asset": "shared:characters/bf-death",
       "name": "firstDeath",
-      "prefix": "BF dies",
-      "offsets": [-36, 12],
-      "animType": "symbol"
+      "prefix": "Death Intro",
+      "offsets": [10, 125],
+      "atlasSettings": {
+        "uniqueInCache": true
+      }
     },
     {
+      "assetPath": "shared:characters/bf-death",
       "name": "deathLoop",
-      "prefix": "BF Dead Loop",
+      "prefix": "Death Loop",
       "looped": true,
-      "offsets": [-47, 5],
-      "animType": "symbol"
+      "offsets": [10, 125]
     },
     {
+      "asset": "shared:characters/bf-death",
       "name": "deathConfirm",
-      "prefix": "BF Dead confirm",
-      "offsets": [-47, 93],
-      "animType": "symbol"
+      "prefix": "Death Confirm",
+      "offsets": [10, 125]
+    },
+    {
+      "assetPath": "shared:characters/bfFakeOut",
+      "name": "fakeoutDeath",
+      "prefix": "fake out death BF",
+      "animType": "symbol",
+      "offsets": [-3, 45]
     }
   ]
 }

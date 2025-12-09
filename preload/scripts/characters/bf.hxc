@@ -1,14 +1,13 @@
-import funkin.graphics.FunkinSprite;
 import flixel.FlxG;
 import funkin.audio.FunkinSound;
-import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.GameOverSubState;
 import funkin.play.PlayState;
 import funkin.Preferences;
 import funkin.util.Constants;
 import funkin.util.HapticUtil;
 
-class BoyfriendCharacter extends MultiSparrowCharacter
+class BoyfriendCharacter extends MultiAnimateAtlasCharacter
 {
   function new()
   {
@@ -36,13 +35,11 @@ class BoyfriendCharacter extends MultiSparrowCharacter
 
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
+    super.playAnimation(name, restart, ignoreOther);
+
     if (name == "fakeoutDeath" && !this.debug)
     {
       doFakeoutDeath();
-    }
-    else
-    {
-      super.playAnimation(name, restart, ignoreOther);
     }
   }
 
@@ -50,27 +47,14 @@ class BoyfriendCharacter extends MultiSparrowCharacter
   {
     FunkinSound.playOnce(Paths.sound("gameplay/gameover/fakeout_death"), 1.0);
 
-    var bfFakeout:FunkinSprite = FunkinSprite.createTextureAtlas(this.x - 430, this.y - 240, "characters/bfFakeOut", "shared");
-
-    // man i'm tired i'm just gonna do this the easy way
-    // TODO: properly reposition him later
-    bfFakeout.applyStageMatrix = true;
-
-    GameOverSubState.instance.add(bfFakeout);
-    bfFakeout.zIndex = 1000;
-    bfFakeout.anim.play('');
     // We don't want people to miss this.
     GameOverSubState.instance.mustNotExit = true;
-    bfFakeout.animation.onFinish.add(() -> {
-      bfFakeout.visible = false;
-      this.visible = true;
+    this.animation.onFinish.addOnce(() -> {
       GameOverSubState.instance.mustNotExit = false;
-      this.playAnimation('firstDeath', true, true);
+      this.playAnimation('firstDeath', true);
       // Play the "blue balled" sound. May play a variant if one has been assigned.
       GameOverSubState.playBlueBalledSFX();
     });
-    bfFakeout.visible = true;
-    this.visible = false;
   }
 
   override function getDeathQuote():Null<String>
