@@ -33,9 +33,6 @@ class TankmanSprite extends FunkinSprite
 
     initializeAnimations();
 
-    trace('Tankman sprite loaded!');
-    trace(this.isAnimate);
-
     setGraphicSize(Std.int(width * 0.4));
 
     updateHitbox();
