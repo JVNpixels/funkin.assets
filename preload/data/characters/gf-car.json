@@ -5,7 +5,7 @@
   "renderType": "animateatlas",
   "startingAnimation": "danceRight",
   "offsets": [0, 0],
-  "cameraOffsets": [0, -200],
+  "cameraOffsets": [0, -199],
   "animations": [
     {
       "name": "danceLeft",
