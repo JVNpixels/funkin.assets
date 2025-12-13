@@ -13,7 +13,7 @@
     "cameraOffsets": [500, 450],
     "cameraZoom": 0.8
   },
-  "offsets": [580, 340],
+  "offsets": [580, 640],
   "atlasSettings": {
     "cacheOnLoad": true
   },

@@ -3,8 +3,8 @@
   "name": "Tankman (Bloody)",
   "renderType": "multianimateatlas",
   "assetPath": "shared:characters/tankman/basic",
-  "offsets": [10, -210],
-  "cameraOffsets": [10, -150],
+  "offsets": [2, -45],
+  "cameraOffsets": [2, 10],
   "healthIcon": {
     "id": "tankman"
   },

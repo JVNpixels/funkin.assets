@@ -4,8 +4,8 @@
   "assetPath": "shared:characters/dad",
   "renderType": "animateatlas",
   "singTime": 8.0,
-  "offsets": [0, -200],
-  "cameraOffsets": [0, -200],
+  "offsets": [0, 15],
+  "cameraOffsets": [0, 15],
   "animations": [
     {
       "name": "idle",
