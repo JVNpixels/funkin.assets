@@ -4,8 +4,8 @@
   "renderType": "multianimateatlas",
   "assetPath": "shared:characters/bf-dark",
   "flipX": true,
-  "offsets": [15, 15],
-  "cameraOffsets": [15, 15],
+  "offsets": [16, 3],
+  "cameraOffsets": [-16, 36],
   "death": {
     "cameraOffsets": [-300, -450]
   },

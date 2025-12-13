@@ -7,8 +7,8 @@
     "id": "bf"
   },
   "flipX": true,
-  "offsets": [15, 5],
-  "cameraOffsets": [15, 35],
+  "offsets": [17, 3],
+  "cameraOffsets": [-17, 36],
   "death": {
     "cameraOffsets": [-300, -450]
   },

@@ -48,7 +48,7 @@ class BoyfriendDarkCharacter extends MultiAnimateAtlasCharacter
     if (normalChar != null)
     {
       normalChar.playAnimation(name, restart, ignoreOther);
-      normalChar.setPosition(this.x, this.y);
+      normalChar.setPosition(this.x - 1, this.y - 11);
     }
   }
 
