@@ -7,7 +7,7 @@
   "offsets": [16, 3],
   "cameraOffsets": [-16, 36],
   "death": {
-    "cameraOffsets": [-300, -450]
+    "cameraOffsets": [-61, -68]
   },
   "healthIcon": {
     "id": "bf"
