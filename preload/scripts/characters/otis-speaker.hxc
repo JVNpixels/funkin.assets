@@ -108,7 +108,7 @@ class OtisSpeakerCharacter extends AnimateAtlasCharacter
     initTimemap();
   }
 
-  function updateMuzzle()
+  function updateMuzzle():Void
   {
     if (muzzleFlash.animation.curAnim.curFrame > 1)
     {
@@ -179,8 +179,8 @@ class OtisSpeakerCharacter extends AnimateAtlasCharacter
     // refreshes just for the zIndex shit!
     if (!refershedLol)
     {
-      abot.x = this.x - 400 - (-this.globalOffsets[0] * this.scale.x);
-      abot.y = this.y + 200 - (-this.globalOffsets[1] * this.scale.y);
+      abot.x = this.x + 170 - (-this.globalOffsets[0] * this.scale.x);
+      abot.y = this.y + 455 - (-this.globalOffsets[1] * this.scale.y);
       abot.zIndex = this.zIndex - 10;
 
       PlayState.instance.currentStage.add(abot);
@@ -248,19 +248,19 @@ class OtisSpeakerCharacter extends AnimateAtlasCharacter
     {
       case 0:
         this.playAnimation('shoot1', true, true);
-        muzzleFlash.setPosition(this.x + 400, this.y - 400);
+        muzzleFlash.setPosition(this.x + 950, this.y);
         muzzleFlash.animation.play('shoot1', true);
       case 1:
         this.playAnimation('shoot2', true, true);
-        muzzleFlash.setPosition(this.x + 400, this.y - 400);
+        muzzleFlash.setPosition(this.x + 950, this.y - 50);
         muzzleFlash.animation.play('shoot2', true);
       case 2:
         this.playAnimation('shoot3', true, true);
-        muzzleFlash.setPosition(this.x - 900, this.y - 450);
+        muzzleFlash.setPosition(this.x - 350, this.y - 50);
         muzzleFlash.animation.play('shoot3', true);
       case 3:
         this.playAnimation('shoot4', true, true);
-        muzzleFlash.setPosition(this.x - 900, this.y - 450);
+        muzzleFlash.setPosition(this.x - 350, this.y - 100);
         muzzleFlash.animation.play('shoot4', true);
     }
   }
