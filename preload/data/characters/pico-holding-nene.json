@@ -5,8 +5,8 @@
   "healthIcon": {
     "id": "pico"
   },
-  "offsets": [55, -132],
-  "cameraOffsets": [0, -132],
+  "offsets": [52, 16],
+  "cameraOffsets": [-32, 24],
   "death": {
     "cameraOffsets": [-600, -600]
   },
