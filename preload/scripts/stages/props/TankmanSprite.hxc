@@ -64,11 +64,12 @@ class TankmanSprite extends FunkinSprite
     rim.baseSaturation = -20;
     rim.threshold = 0.4;
     rim.color = 0xFFDFEF3C;
+    rim.attachedSprite = this.superClass;
 
     this.shader = rim;
 
     animation.onFrameChange.add(function() {
-      rim.updateFrameInfoSimple(this.frameWidth, this.frameHeight, 0);
+      rim.updateFrameInfo(this.frame);
     });
 
     // If goingRight is false, 0 degrees = facing right.
