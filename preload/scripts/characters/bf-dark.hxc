@@ -35,9 +35,13 @@ class BoyfriendDarkCharacter extends MultiAnimateAtlasCharacter
   override function set_alpha(val:Float):Float
   {
     super.set_alpha(val);
-    if (val != 1) normalChar.alpha = 1;
-    else
-      normalChar.alpha = 0.0001;
+
+    if (normalChar != null)
+    {
+      if (val != 1) normalChar.alpha = 1;
+      else
+        normalChar.alpha = 0.0001;
+    }
 
     return val;
   }
@@ -55,12 +59,16 @@ class BoyfriendDarkCharacter extends MultiAnimateAtlasCharacter
   function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
-    normalChar = CharacterDataParser.fetchCharacter('bf');
-    normalChar.zIndex = 199;
-    normalChar.alpha = 0.0001;
-    normalChar.flipX = false;
 
-    PlayState.instance.currentStage.add(normalChar);
-    PlayState.instance.currentStage.refresh(); // Apply z-index.
+    if (!this.debug)
+    {
+      normalChar = CharacterDataParser.fetchCharacter('bf');
+      normalChar.zIndex = 199;
+      normalChar.alpha = 0.0001;
+      normalChar.flipX = false;
+
+      PlayState.instance.currentStage.add(normalChar);
+      PlayState.instance.currentStage.refresh(); // Apply z-index.
+    }
   }
 }
