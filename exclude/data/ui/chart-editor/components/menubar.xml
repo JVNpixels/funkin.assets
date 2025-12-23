@@ -142,11 +142,7 @@
     <menu-checkbox width="100%" id="menubarItemToggleToolboxEventData" text="Events" />
     <menu-checkbox width="100%" id="menubarItemToggleToolboxFreeplay" text="Freeplay Properties" />
     <menu-checkbox width="100%" id="menubarItemToggleToolboxPlaytestProperties" text="Playtest Properties" />
-    </vbox>
-    <vbox width="100%">
     <menu-checkbox width="100%" id="menubarItemToggleToolboxPlayerPreview" text="Player Preview" />
-    </vbox>
-    <vbox width="100%">
     <menu-checkbox width="100%" id="menubarItemToggleToolboxOpponentPreview" text="Opponent Preview" />
     </vbox>
   </menu>
