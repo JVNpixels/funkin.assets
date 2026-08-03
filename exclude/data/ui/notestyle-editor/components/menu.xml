@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menubar id="menubar" width="100%" height="35" paddingLeft="256">
+  <style>
+    .menu {
+    // The width of the individual menu items
+    width: 160px;
+    }
+    #menubarOpenRecent {
+      width: auto;
+      initial-width: none;
+      min-width: 160px;
+      max-width: 800px;
+    }
+  </style>
+  <menu text="File" id="menubarMenuFile">
+    <menu-item id="menubarItemNewNoteStyle" text="New NoteStyle" shortcutText="Ctrl+N" />
+    <menu-separator />
+    <menu-item id="menubarItemOpenNoteStyle" text="Open NoteStyle..." shortcutText="Ctrl+O" />
+    <menu id="menubarItemOpenRecent" text="Open Recent" />
+    <menu-separator />
+    <menu-item id="menubarItemSaveNoteStyle" text="Save NoteStyle" shortcutText="Ctrl+S" />
+    <menu-item id="menubarItemSaveNoteStyleAs" text="Save NoteStyle As..." shortcutText="Ctrl+Shift+S" />
+    <menu-separator />
+    <menu-item id="menubarItemExit" text="Exit" shortcutText="Ctrl + Q" />
+  </menu>
+  <menu text="View" id="menubarMenuView">
+    <menu text="Theme">
+      <menu-option-box id="menubarItemThemeLight" text="Light" group="menubarItemThemeGroup" tooltip="Change the Background's Color Scheme to Light Mode." />
+      <menu-option-box id="menubarItemThemeDark" text="Dark" group="menubarItemThemeGroup" tooltip="Change the Background's Color Scheme to Dark Mode." />
+    </menu>
+  </menu>
+  <menu text="Audio" id="menubarMenuAudio">
+    <menu-checkbox width="100%" id="menubarItemToggleMusic" text="Play Theme Music" />
+    <menu-separator />
+    <menu text="Hitsound">
+      <menu-option-box id="menubarItemHitsoundPlayer" text="Hitsound Player" group="menubarItemHitsoundGroup" tooltip="Change the hitsound to the players' hitsound from the Chart Editor when testing." />
+      <menu-option-box id="menubarItemHitsoundOpponent" text="Hitsound Opponent" group="menubarItemHitsoundGroup" tooltip="Change the hitsound to the opponent's hitsound from the Chart Editor when testing." />
+      <menu-option-box id="menubarItemHitsoundNone" text="Hitsound None" group="menubarItemHitsoundGroup" tooltip="Disable hitsounds entirely." />
+    </menu>
+    <menu-separator />
+    <hbox width="100%" style="padding: 5px;">
+      <vbox width="100%" style="padding: 5px;">
+        <label id="menubarLabelVolumeHitsound" styleName="menuLabel" text="Hitsound Volume - 100%" />
+        <slider id="menubarItemVolumeHitsound" width="100%" majorTicks="10" minorTicks="5" pos="100" />
+      </vbox>
+    </hbox>
+  </menu>
+  <menu text="Window">
+    <vbox width="100%">
+    <menu-checkbox width="100%" id="menubarItemToggleToolboxMetadata" text="Metadata" />
+    </vbox>
+  </menu>
+  <menu text="Help" id="menubarMenuHelp">
+    <menu-item id="menubarItemWelcomeDialog" text="Welcome Dialog" />
+    <menu-item id="menubarItemUserGuide" text="User Guide" shortcutText="F1" />
+    <menu-item id="menubarItemBackupsFolder" text="Go to Backups Folder" />
+    <menu-item id="menubarItemAbout" text="About..." />
+  </menu>
+  <spacer width="100%" />
+  <label text="PROTOTYPE Functionality is subject to change." verticalAlign="center" />
+</menubar>

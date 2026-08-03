@@ -1,0 +1,6 @@
+<box id="bottomBar" width="100%" height="48" styleName="bottomBar" verticalAlign="bottom">
+  <hbox horizontalAlign="left" verticalAlign="center">
+    <label id="testingModeText" text="Confirm" styleName="modeText" verticalAlign="center" tooltip="Click to swap between NoteStyle testing modes."/>
+    <rule direction="vertical" height="80%" />
+  </hbox>
+</box>

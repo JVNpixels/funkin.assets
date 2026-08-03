@@ -1,0 +1,3 @@
+<box width="100%" id="countdownImagesEntryBox" height="100%" styleName="uploadBG" style="border: 2px dotted #DDDDDD; padding: 5px;">
+	<label id="countdownImagesEntryLabel" width="100%" style="font-size: 16px" verticalAlign="center" horizontalAlign="center" textAlign="center" text="" styleName = "countdownImageEntry" />
+</box>
