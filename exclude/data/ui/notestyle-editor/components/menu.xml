@@ -28,6 +28,10 @@
       <menu-option-box id="menubarItemThemeLight" text="Light" group="menubarItemThemeGroup" tooltip="Change the Background's Color Scheme to Light Mode." />
       <menu-option-box id="menubarItemThemeDark" text="Dark" group="menubarItemThemeGroup" tooltip="Change the Background's Color Scheme to Dark Mode." />
     </menu>
+    <menu text="Background">
+      <menu-option-box id="menubarItemBackgroundGrid" text="Grid" group="menubarItemBackgroundGroup" tooltip="Change the Background into a grid." />
+      <menu-option-box id="menubarItemBackgroundMenu" text="Menu" group="menubarItemBackgroundGroup" tooltip="Change the Background to the image used in menus across the game." />
+    </menu>
   </menu>
   <menu text="Audio" id="menubarMenuAudio">
     <menu-checkbox width="100%" id="menubarItemToggleMusic" text="Play Theme Music" />
