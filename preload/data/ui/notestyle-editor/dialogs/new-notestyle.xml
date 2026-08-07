@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NOTE: This dialog is used in the notestyle editor when the player is making a new notestyle. -->
+<dialog id="metadataDialog" width="325" title="New NoteStyle - Provide NoteStyle Metadata">
+	<vbox width="100%">
+		<form id="metadataForm" width="100%">
+			<grid columns="2" width="100%">
+				<label text="NoteStyle Name:" verticalAlign="center" horizontalAlign="right" />
+				<textfield id="inputNoteStyleName" value="" />
+				<label text="NoteStyle Author:" verticalAlign="center" horizontalAlign="right" />
+				<textfield id="inputNoteStyleAuthor" value="" />
+				<label text="Fallback:" verticalAlign="center" horizontalAlign="right" />
+				<dropdown id="inputFallback" value="Funkin'" horizontalAlign="right" width="100%" dropdownSize="7" dropdownWidth="200" searchable="true">
+					<data>
+						<item id="funkin" text="Funkin'" />
+						<item id="pixel" text="Pixel" />
+					</data>
+				</dropdown>
+			</grid>
+		</form>
+		<hbox width="100%">
+			<button text="Cancel" id="dialogCancel" />
+			<spacer width="100%" />
+			<button text="Continue" id="dialogContinue" horizontalAlign="right" onclick="metadataForm.submit()" />
+		</hbox>
+	</vbox>
+</dialog>

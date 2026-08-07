@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collapsible-dialog id="toolboxMetadata" title="NoteStyle Metadata" width="600">
+    <hbox width="100%">
+        <vbox width="50%">
+            <vbox width="100%">
+                <grid columns="2">
+                    <label text="Name:" verticalAlign="center" horizontalAlign="right" />
+                    <textfield id="inputSongId" value="bopeebo" tooltip="The unique identifier for the song. This is used to refer to the song in code/assets and should only contain filename-safe characters." />
+                    <label text="Author:" verticalAlign="center" horizontalAlign="right" />
+                    <textfield id="inputSongName" value="Bopeebo" tooltip="The readable name of the song." />
+                    <label text="Fallback:" verticalAlign="center" horizontalAlign="right" />
+                    <dropdown id="inputNoteStyle" value="Normal" width="100%" horizontalAlign="right" dropdownSize="10" dropdownWidth="200" tooltip="Which graphical style of notes to use.">
+                        <data>
+                            <item text="Normal" />
+                            <item text="Pixel" />
+                        </data>
+                    </dropdown>
+                </grid>
+            </vbox>
+        </vbox>
+    </hbox>
+</collapsible-dialog>
