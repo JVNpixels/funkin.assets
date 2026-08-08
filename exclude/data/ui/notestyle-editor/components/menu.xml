@@ -60,7 +60,10 @@
     <menu-item id="menubarItemBackupsFolder" text="Go to Backups Folder" />
     <menu-item id="menubarItemAbout" text="About..." />
   </menu>
-  <button id="menubarButtonTest" text="Test NoteStyle" toggle="true" tooltip="Test the NoteStyle inside the PlayState." />
+  <menu text="Test" id="menubarMenuTest">
+    <menu-item id="menubarItemTest" text="Test NoteStyle" tooltip="Test the NoteStyle inside the PlayState."/>
+    <menu-item id="menubarItemTestMinimalMode" text="Test NoteStyle (Minimal Mode)" tooltip="Test the NoteStyle inside the PlayState using minimal mode."/>
+  </menu>
   <spacer width="100%" />
   <label text="PROTOTYPE Functionality is subject to change." verticalAlign="center" />
 </menubar>
