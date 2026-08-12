@@ -5,13 +5,13 @@
             <vbox width="100%">
                 <grid columns="2">
                     <label text="Name:" verticalAlign="center" horizontalAlign="right" />
-                    <textfield id="inputSongId" value="bopeebo" tooltip="The unique identifier for the song. This is used to refer to the song in code/assets and should only contain filename-safe characters." />
+                    <textfield id="inputName" value="Funkin'" tooltip="The unique identifier for the song. This is used to refer to the song in code/assets and should only contain filename-safe characters." />
                     <label text="Author:" verticalAlign="center" horizontalAlign="right" />
-                    <textfield id="inputSongName" value="Bopeebo" tooltip="The readable name of the song." />
+                    <textfield id="inputAuthor" value="" tooltip="The person who created the NoteStyle." />
                     <label text="Fallback:" verticalAlign="center" horizontalAlign="right" />
-                    <dropdown id="inputNoteStyle" value="Normal" width="100%" horizontalAlign="right" dropdownSize="10" dropdownWidth="200" tooltip="Which graphical style of notes to use.">
+                    <dropdown id="inputFallback" value="Funkin'" width="100%" horizontalAlign="right" dropdownSize="10" dropdownWidth="200" tooltip="Which fallback to use.">
                         <data>
-                            <item text="Normal" />
+                            <item text="Funkin'" />
                             <item text="Pixel" />
                         </data>
                     </dropdown>

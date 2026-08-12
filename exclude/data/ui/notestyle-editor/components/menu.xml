@@ -49,6 +49,10 @@
       </vbox>
     </hbox>
   </menu>
+  <menu text="Test" id="menubarMenuTest">
+    <menu-item id="menubarItemTest" text="Test NoteStyle" tooltip="Test the NoteStyle inside the PlayState."/>
+    <menu-item id="menubarItemTestMinimalMode" text="Test NoteStyle (Minimal Mode)" tooltip="Test the NoteStyle inside the PlayState using minimal mode."/>
+  </menu>
   <menu text="Window">
     <vbox width="100%">
     <menu-checkbox width="100%" id="menubarItemToggleToolboxMetadata" text="Metadata" />
@@ -59,10 +63,6 @@
     <menu-item id="menubarItemUserGuide" text="User Guide" shortcutText="F1" />
     <menu-item id="menubarItemBackupsFolder" text="Go to Backups Folder" />
     <menu-item id="menubarItemAbout" text="About..." />
-  </menu>
-  <menu text="Test" id="menubarMenuTest">
-    <menu-item id="menubarItemTest" text="Test NoteStyle" tooltip="Test the NoteStyle inside the PlayState."/>
-    <menu-item id="menubarItemTestMinimalMode" text="Test NoteStyle (Minimal Mode)" tooltip="Test the NoteStyle inside the PlayState using minimal mode."/>
   </menu>
   <spacer width="100%" />
   <label text="PROTOTYPE Functionality is subject to change." verticalAlign="center" />
